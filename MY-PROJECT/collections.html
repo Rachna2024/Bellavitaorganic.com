@@ -1,0 +1,890 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>collections</title>
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900&display=swap');
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            margin: 0;
+            font-family: poppins;
+        }
+
+        .parent-container {
+            display: flex;
+            align-items: center;
+            background-color: black;
+            overflow: hidden;
+            margin-bottom: 0;
+        }
+
+        .left-div,
+        .right-div {
+            flex: 1;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: white;
+        }
+
+        .left-div span,
+        .right-div span {
+            font-size: 1.3em;
+        }
+
+        .center-div {
+            flex: 4;
+            position: relative;
+            overflow: hidden;
+            height: 50px;
+        }
+
+        .slider {
+            display: flex;
+            width: 400%;
+            height: 100%;
+            animation: slide 12s infinite;
+        }
+
+        @keyframes slide {
+            0% {
+                transform: translateX(0);
+            }
+
+            25% {
+                transform: translateX(0);
+            }
+
+            30% {
+                transform: translateX(-25%);
+            }
+
+            50% {
+                transform: translateX(-25%);
+            }
+
+            55% {
+                transform: translateX(-50%);
+            }
+
+            75% {
+                transform: translateX(-50%);
+            }
+
+            80% {
+                transform: translateX(-75%);
+            }
+
+            100% {
+                transform: translateX(-75%);
+            }
+        }
+
+        .slide {
+            width: 25%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 1.5em;
+            color: white;
+            font-size: 20px;
+        }
+
+        .navbar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background-color: white;
+            padding: 20px 20px 0px 20px;
+        }
+
+        .search-bar {
+            display: flex;
+            align-items: center;
+        }
+
+        .search-icon p {
+            width: 20px;
+            height: 20px;
+        }
+
+        .search-text input[type="text"] {
+            padding: 5px;
+            border: none;
+            outline: none;
+            background: transparent;
+            color: #fff;
+        }
+
+        .underline {
+            width: 100%;
+            height: 1px;
+            background-color: black;
+        }
+
+        .logo img {
+            width: 100%;
+        }
+
+        .user-icon p,
+        .shopping-bag p {
+            width: 25px;
+            height: 25px;
+        }
+
+        .second-navbar {
+            display: flex;
+            justify-content: space-between;
+            background-color: white;
+            padding: 10px 20px;
+        }
+
+        .nav-item {
+            padding: 10px;
+            cursor: pointer;
+        }
+
+        .large-image {
+            width: 100%;
+            height: 100%;
+            overflow: hidden;
+        }
+
+        .Bestsellers {
+            text-align: center;
+            padding: 20px;
+            background-color: white;
+        }
+
+        .container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+    width: 80%;
+    margin: 40px auto;
+}
+
+.item {
+    width: calc(25% - 40px);
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+}
+
+.item img {
+    width: 100%;
+    height: auto;
+    transition: transform 0.3s ease-in-out;
+}
+
+.item:hover img {
+    transform: scale(1.1);
+}
+
+.item h5 {
+    margin: 10px 0;
+}
+
+.item p {
+    margin: 5px 0;
+}
+
+.item p:first-of-type {
+    font-size: 0.6em;
+}
+
+.item button {
+    margin-top: 20px;
+    padding: 10px 20px;
+    background-color: black; 
+    color: #fff;
+    border: none;
+    cursor: pointer;
+    position: relative; 
+    overflow: hidden;
+    align-self: stretch;
+}
+
+.item button::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(120deg, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 0.6) 50%, rgba(255, 255, 255, 0) 100%);
+    transform: skewX(-30deg);
+    transition: 0.5s;
+}
+
+.item button:hover::after {
+    left: 100%;
+    transition: 0.5s;
+}
+
+.item button:hover {
+    background-color: #333; 
+}
+
+.top-left-texts {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    align-items: center;
+    font-size: 10px;
+}
+
+.purple-text {
+    background-color: purple;
+    color: white;
+    padding: 5px;
+    border-radius: 3px;
+}
+
+.chocolate-text {
+    background-color: chocolate;
+    color: white;
+    padding: 5px;
+    border-radius: 3px;
+}
+
+.item {
+    position: relative;
+}
+
+.button-container {
+    display: flex;
+    justify-content: center;
+    margin-top: 30px;
+}
+
+footer {
+    color: white;
+    background-color: #434343;
+    padding: 60px 20px 20px 20px;
+    text-align: center;
+    margin-top: 40px;
+  }
+  
+  .footer-div {
+    display: flex;
+    justify-content: space-around;
+  }
+  
+  .footer-section {
+    margin: 0 20px;
+  }
+  
+  .footer-section ul {
+    list-style-type: none;
+    padding: 0;
+  }
+  
+  .email-section input[type="email"] {
+    width: 100%;
+    padding: 8px;
+    margin-top: 10px;
+  }
+  
+  .keyword {
+    text-align: left;
+    margin-top: 40px;
+    padding: 0px 20px 20px 20px;
+}
+
+.keyword-text {
+    text-align: left;
+    margin-top: 40px;
+    padding: 0px 20px 20px 20px;
+}
+
+.pvt {
+    text-align: left;
+    margin-top: 40px;
+    padding: 0px 20px 20px 20px;
+}
+    </style>
+</head>
+
+<body>
+    <div class="parent-container">
+        <div class="left-div">
+            <span class="material-symbols-outlined">arrow_back_ios</span>
+        </div>
+        <div class="center-div">
+            <div class="slider">
+                <div class="slide"><span class="material-symbols-outlined">featured_seasonal_and_gifts</span>FREE Gift
+                    on all PREPAID Orders</div>
+                <div class="slide">Get any 2 100ml PERFUMES for just <span
+                        class="material-symbols-outlined">currency_rupee</span>949</div>
+                <div class="slide"><span class="material-symbols-outlined">local_fire_department</span>MOST Exclusive
+                    Launch EVER! TIGER</div>
+                <div class="slide">Get any 3 100ml PERFUMES for just<span
+                        class="material-symbols-outlined">currency_rupee</span>1298</div>
+            </div>
+        </div>
+        <div class="right-div">
+            <span class="material-symbols-outlined">arrow_forward_ios</span>
+        </div>
+    </div>
+
+    <div class="navbar">
+        <div class="search-bar">
+            <div class="search-icon">
+                <p><span class="material-symbols-outlined">search</span></p>
+            </div>
+            <div class="search-text">
+                <input type="text" placeholder="Search">
+                <div class="underline"></div>
+            </div>
+        </div>
+        <div class="logo">
+            <img src="https://bellavitaorganic.com/cdn/shop/files/Bella_Vita_Logo_360_E_2x_d60de42b-fa50-45b3-b490-be70ac1fffa1.png?height=30&v=1716533001"
+                alt="Logo">
+        </div>
+        <div class="user-icon">
+            <p><span class="material-symbols-outlined">person</span></p>
+        </div>
+        <div class="shopping-bag">
+            <p><span class="material-symbols-outlined">shopping_bag</span></p>
+        </div>
+    </div>
+
+    <div class="second-navbar">
+        <div class="nav-item">BUY 1 GET 1 FREE</div>
+        <div class="nav-item">CRAZY DEALS</div>
+        <div class="nav-item">SHOP ALL</div>
+        <div class="nav-item">BESTSELLERS</div>
+        <div class="nav-item">PERFUMES</div>
+        <div class="nav-item">BATH & BODY</div>
+        <div class="nav-item">NEW ARRIVALS</div>
+        <div class="nav-item">SKINCARE</div>
+        <div class="nav-item">GIFTING</div>
+    </div>
+
+    <hr>
+
+    <div class="large-image">
+        <img src="https://bellavitaorganic.com/cdn/shop/files/1920-400_1_e11ee911-ef20-4b1a-988d-bb400c357491.jpg?v=1717053776&width=1400"
+            alt="">
+    </div>
+
+    <div class="Bestsellers">
+        <h1>Bestsellers</h1>
+        <p>1. Add minimum 2 Eligible Products to your cart</p>
+        <p>2. BOGO Offer will be automatically applied at checkout</p>
+        <p>3. Same/Low priced product will be FREE</p>
+    </div>
+
+    <div class="container">
+        <div class="item">
+            <div class="top-left-texts">
+                <span class="purple-text">BUY 1 GET 1 FREE</span>
+                <span class="chocolate-text">BESTSELLER</span>
+            </div>
+            <img src="https://bellavitaorganic.com/cdn/shop/files/2_fdeaa10e-361a-4179-9bd4-475bf0147680.jpg?v=1714465104&width=300"
+                alt="Image 1">
+            <p>EAU DE PARFUM</p>
+            <h5>Luxury Perfume Gift Set For Me...</h5>
+            <p><span class="material-symbols-outlined">grade</span>4.4 |<span
+                    class="material-symbols-outlined">check_circle</span>256 Review</p>
+            <p><span class="material-symbols-outlined">currency_rupee</span>849.00</p>
+            <button>ADD TO CART</button>
+        </div>
+        <div class="item">
+            <div class="top-left-texts">
+                <span class="purple-text">BUY 1 GET 1 FREE</span>
+                <span class="chocolate-text">BESTSELLER</span>
+            </div>
+            <img src="https://bellavitaorganic.com/cdn/shop/files/0_6326984c-e89a-43ba-b560-e35d40faba70.jpg?v=1703835295&width=300"
+                alt="Image 2">
+            <p>PERFUME MINIS FOR ALL {SET OF 4}</p>
+            <h5>Luxury OUD Experience Set</h5>
+            <p><span class="material-symbols-outlined">grade</span>4.4 |<span
+                    class="material-symbols-outlined">check_circle</span>256 Review</p>
+            <p><span class="material-symbols-outlined">currency_rupee</span>1,099.00</p>
+            <button>ADD TO CART</button>
+        </div>
+        <div class="item">
+            <div class="top-left-texts">
+                <span class="purple-text">BUY 1 GET 1 FREE</span>
+                <span class="chocolate-text">BESTSELLER</span>
+            </div>
+            <img src="https://bellavitaorganic.com/cdn/shop/files/1_f3651453-9ace-4b6e-b0ac-4ee2b9e5e7cd.jpg?v=1714548565&width=300"
+                alt="Image 3">
+            <p>EAU DE PARFUM</p>
+            <h5>CEO Man Luxury Perfume - 100ml</h5>
+            <p><span class="material-symbols-outlined">grade</span>4.4 |<span
+                    class="material-symbols-outlined">check_circle</span>256 Review</p>
+            <p><span class="material-symbols-outlined">currency_rupee</span>899.00</p>
+            <button>ADD TO CART</button>
+        </div>
+        <div class="item">
+            <div class="top-left-texts">
+                <span class="purple-text">BUY 1 GET 1 FREE</span>
+                <span class="chocolate-text">BESTSELLER</span>
+            </div>
+            <img src="https://bellavitaorganic.com/cdn/shop/files/2_fb5c7b22-2269-4b0e-9e80-0ca465467a86.jpg?v=1716100625&width=300"
+                alt="Image 4">
+            <p>EAU DE PARFUM</p>
+            <h5>Luxury Perfume Gift Set For...</h5>
+            <p><span class="material-symbols-outlined">grade</span>4.4 |<span
+                    class="material-symbols-outlined">check_circle</span>256 Review</p>
+            <p><span class="material-symbols-outlined">currency_rupee</span>849.00</p>
+            <button>ADD TO CART</button>
+        </div>
+        <div class="item">
+            <div class="top-left-texts">
+                <span class="purple-text">BUY 1 GET 1 FREE</span>
+                <span class="chocolate-text">BESTSELLER</span>
+            </div>
+            <img src="https://bellavitaorganic.com/cdn/shop/files/OUDGold-01_e5a25ad1-ff0d-4c62-b038-193741f3f8d3.jpg?v=1714549800&width=300"
+                alt="Image 1">
+            <p>EAU DE PARFUM</p>
+            <h5>Luxury Perfume Gift Set For Me...</h5>
+            <p><span class="material-symbols-outlined">grade</span>4.4 |<span
+                    class="material-symbols-outlined">check_circle</span>256 Review</p>
+            <p><span class="material-symbols-outlined">currency_rupee</span>849.00</p>
+            <button>ADD TO CART</button>
+        </div>
+        <div class="item">
+            <div class="top-left-texts">
+                <span class="purple-text">BUY 1 GET 1 FREE</span>
+                <span class="chocolate-text">BESTSELLER</span>
+            </div>
+            <img src="https://bellavitaorganic.com/cdn/shop/files/mens-shower-gel-trail-pack-9.jpg?v=1699235298&width=300"
+                alt="Image 2">
+            <p>PERFUME MINIS FOR ALL {SET OF 4}</p>
+            <h5>Luxury OUD Experience Set</h5>
+            <p><span class="material-symbols-outlined">grade</span>4.4 |<span
+                    class="material-symbols-outlined">check_circle</span>256 Review</p>
+            <p><span class="material-symbols-outlined">currency_rupee</span>1,099.00</p>
+            <button>ADD TO CART</button>
+        </div>
+        <div class="item">
+            <div class="top-left-texts">
+                <span class="purple-text">BUY 1 GET 1 FREE</span>
+                <span class="chocolate-text">BESTSELLER</span>
+            </div>
+            <img src="https://bellavitaorganic.com/cdn/shop/files/2_3b020d46-2c42-44d2-b161-810e1a1b64db.jpg?v=1716100624&width=300"
+                alt="Image 3">
+            <p>EAU DE PARFUM</p>
+            <h5>CEO Man Luxury Perfume - 100ml</h5>
+            <p><span class="material-symbols-outlined">grade</span>4.4 |<span
+                    class="material-symbols-outlined">check_circle</span>256 Review</p>
+            <p><span class="material-symbols-outlined">currency_rupee</span>899.00</p>
+            <button>ADD TO CART</button>
+        </div>
+        <div class="item">
+            <div class="top-left-texts">
+                <span class="purple-text">BUY 1 GET 1 FREE</span>
+                <span class="chocolate-text">BESTSELLER</span>
+            </div>
+            <img src="https://bellavitaorganic.com/cdn/shop/files/1_5f66d63c-c516-41df-b3bc-b1e77df898b8.jpg?v=1714554831&width=300"
+                alt="Image 4">
+            <p>EAU DE PARFUM</p>
+            <h5>Luxury Perfume Gift Set For...</h5>
+            <p><span class="material-symbols-outlined">grade</span>4.4 |<span
+                    class="material-symbols-outlined">check_circle</span>256 Review</p>
+            <p><span class="material-symbols-outlined">currency_rupee</span>849.00</p>
+            <button>ADD TO CART</button>
+        </div>
+        <div class="item">
+            <div class="top-left-texts">
+                <span class="purple-text">BUY 1 GET 1 FREE</span>
+                <span class="chocolate-text">BESTSELLER</span>
+            </div>
+            <img src="https://bellavitaorganic.com/cdn/shop/files/1_d5115b80-e607-4477-9205-b78447cd0e10.jpg?v=1714549127&width=300"
+                alt="Image 1">
+            <p>EAU DE PARFUM</p>
+            <h5>Luxury Perfume Gift Set For Me...</h5>
+            <p><span class="material-symbols-outlined">grade</span>4.4 |<span
+                    class="material-symbols-outlined">check_circle</span>256 Review</p>
+            <p><span class="material-symbols-outlined">currency_rupee</span>849.00</p>
+            <button>ADD TO CART</button>
+        </div>
+        <div class="item">
+            <div class="top-left-texts">
+                <span class="purple-text">BUY 1 GET 1 FREE</span>
+                <span class="chocolate-text">BESTSELLER</span>
+            </div>
+            <img src="https://bellavitaorganic.com/cdn/shop/files/BestOfMenPerfumeCombo-100mlX3.jpg?v=1693932739&width=300"
+                alt="Image 2">
+            <p>PERFUME MINIS FOR ALL {SET OF 4}</p>
+            <h5>Luxury OUD Experience Set</h5>
+            <p><span class="material-symbols-outlined">grade</span>4.4 |<span
+                    class="material-symbols-outlined">check_circle</span>256 Review</p>
+            <p><span class="material-symbols-outlined">currency_rupee</span>1,099.00</p>
+            <button>ADD TO CART</button>
+        </div>
+        <div class="item">
+            <div class="top-left-texts">
+                <span class="purple-text">BUY 1 GET 1 FREE</span>
+                <span class="chocolate-text">BESTSELLER</span>
+            </div>
+            <img src="https://bellavitaorganic.com/cdn/shop/files/1_f67f45b0-f265-4845-98bf-982e0c595504.jpg?v=1714740709&width=300"
+                alt="Image 3">
+            <p>EAU DE PARFUM</p>
+            <h5>CEO Man Luxury Perfume - 100ml</h5>
+            <p><span class="material-symbols-outlined">grade</span>4.4 |<span
+                    class="material-symbols-outlined">check_circle</span>256 Review</p>
+            <p><span class="material-symbols-outlined">currency_rupee</span>899.00</p>
+            <button>ADD TO CART</button>
+        </div>
+        <div class="item">
+            <div class="top-left-texts">
+                <span class="purple-text">BUY 1 GET 1 FREE</span>
+                <span class="chocolate-text">BESTSELLER</span>
+            </div>
+            <img src="https://bellavitaorganic.com/cdn/shop/files/1_882dadd1-43e2-4c85-a8a6-0da791b34d8f.jpg?v=1714548090&width=300"
+                alt="Image 4">
+            <p>EAU DE PARFUM</p>
+            <h5>Luxury Perfume Gift Set For...</h5>
+            <p><span class="material-symbols-outlined">grade</span>4.4 |<span
+                    class="material-symbols-outlined">check_circle</span>256 Review</p>
+            <p><span class="material-symbols-outlined">currency_rupee</span>849.00</p>
+            <button>ADD TO CART</button>
+        </div>
+        <div class="item">
+            <div class="top-left-texts">
+                <span class="purple-text">BUY 1 GET 1 FREE</span>
+                <span class="chocolate-text">BESTSELLER</span>
+            </div>
+            <img src="https://bellavitaorganic.com/cdn/shop/files/1_a3084c38-b22a-4881-9679-7e5d6c8df661.jpg?v=1714554416&width=300"
+                alt="Image 1">
+            <p>EAU DE PARFUM</p>
+            <h5>Luxury Perfume Gift Set For Me...</h5>
+            <p><span class="material-symbols-outlined">grade</span>4.4 |<span
+                    class="material-symbols-outlined">check_circle</span>256 Review</p>
+            <p><span class="material-symbols-outlined">currency_rupee</span>849.00</p>
+            <button>ADD TO CART</button>
+        </div>
+        <div class="item">
+            <div class="top-left-texts">
+                <span class="purple-text">BUY 1 GET 1 FREE</span>
+                <span class="chocolate-text">BESTSELLER</span>
+            </div>
+            <img src="https://bellavitaorganic.com/cdn/shop/files/0_6326984c-e89a-43ba-b560-e35d40faba70.jpg?v=1703835295&width=300"
+                alt="Image 2">
+            <p>PERFUME MINIS FOR ALL {SET OF 4}</p>
+            <h5>Luxury OUD Experience Set</h5>
+            <p><span class="material-symbols-outlined">grade</span>4.4 |<span
+                    class="material-symbols-outlined">check_circle</span>256 Review</p>
+            <p><span class="material-symbols-outlined">currency_rupee</span>1,099.00</p>
+            <button>ADD TO CART</button>
+        </div>
+        <div class="item">
+            <div class="top-left-texts">
+                <span class="purple-text">BUY 1 GET 1 FREE</span>
+                <span class="chocolate-text">BESTSELLER</span>
+            </div>
+            <img src="https://bellavitaorganic.com/cdn/shop/files/1_a3084c38-b22a-4881-9679-7e5d6c8df661.jpg?v=1714554416&width=300"
+                alt="Image 3">
+            <p>EAU DE PARFUM</p>
+            <h5>CEO Man Luxury Perfume - 100ml</h5>
+            <p><span class="material-symbols-outlined">grade</span>4.4 |<span
+                    class="material-symbols-outlined">check_circle</span>256 Review</p>
+            <p><span class="material-symbols-outlined">currency_rupee</span>899.00</p>
+            <button>ADD TO CART</button>
+        </div>
+        <div class="item">
+            <div class="top-left-texts">
+                <span class="purple-text">BUY 1 GET 1 FREE</span>
+                <span class="chocolate-text">BESTSELLER</span>
+            </div>
+            <img src="https://bellavitaorganic.com/cdn/shop/files/1_cbc01e2c-9c58-4794-9845-a4557e101a27.jpg?v=1714553892&width=300"
+                alt="Image 4">
+            <p>EAU DE PARFUM</p>
+            <h5>Luxury Perfume Gift Set For...</h5>
+            <p><span class="material-symbols-outlined">grade</span>4.4 |<span
+                    class="material-symbols-outlined">check_circle</span>256 Review</p>
+            <p><span class="material-symbols-outlined">currency_rupee</span>849.00</p>
+            <button>ADD TO CART</button>
+        </div>
+        <div class="item">
+            <div class="top-left-texts">
+                <span class="purple-text">BUY 1 GET 1 FREE</span>
+                <span class="chocolate-text">BESTSELLER</span>
+            </div>
+            <img src="https://bellavitaorganic.com/cdn/shop/files/DeoParfumPackof3-01_7f73e71a-128c-4053-8e51-3c351e9ff737.jpg?v=1716369451&width=300"
+                alt="Image 1">
+            <p>EAU DE PARFUM</p>
+            <h5>Luxury Perfume Gift Set For Me...</h5>
+            <p><span class="material-symbols-outlined">grade</span>4.4 |<span
+                    class="material-symbols-outlined">check_circle</span>256 Review</p>
+            <p><span class="material-symbols-outlined">currency_rupee</span>849.00</p>
+            <button>ADD TO CART</button>
+        </div>
+        <div class="item">
+            <div class="top-left-texts">
+                <span class="purple-text">BUY 1 GET 1 FREE</span>
+                <span class="chocolate-text">BESTSELLER</span>
+            </div>
+            <img src="https://bellavitaorganic.com/cdn/shop/files/Honey-Oud_1_0194a97a-68e8-4039-9f4f-86ae427f4707.jpg?v=1714553484&width=300"
+                alt="Image 2">
+            <p>PERFUME MINIS FOR ALL {SET OF 4}</p>
+            <h5>Luxury OUD Experience Set</h5>
+            <p><span class="material-symbols-outlined">grade</span>4.4 |<span
+                    class="material-symbols-outlined">check_circle</span>256 Review</p>
+            <p><span class="material-symbols-outlined">currency_rupee</span>1,099.00</p>
+            <button>ADD TO CART</button>
+        </div>
+        <div class="item">
+            <div class="top-left-texts">
+                <span class="purple-text">BUY 1 GET 1 FREE</span>
+                <span class="chocolate-text">BESTSELLER</span>
+            </div>
+            <img src="https://bellavitaorganic.com/cdn/shop/files/1_ac53b892-f2c6-4add-af46-bd760a0ac0f6.jpg?v=1714554743&width=300"
+                alt="Image 3">
+            <p>EAU DE PARFUM</p>
+            <h5>CEO Man Luxury Perfume - 100ml</h5>
+            <p><span class="material-symbols-outlined">grade</span>4.4 |<span
+                    class="material-symbols-outlined">check_circle</span>256 Review</p>
+            <p><span class="material-symbols-outlined">currency_rupee</span>899.00</p>
+            <button>ADD TO CART</button>
+        </div>
+        <div class="item">
+            <div class="top-left-texts">
+                <span class="purple-text">BUY 1 GET 1 FREE</span>
+                <span class="chocolate-text">BESTSELLER</span>
+            </div>
+            <img src="https://bellavitaorganic.com/cdn/shop/files/Exfoliate.jpg?v=1693827497&width=300"
+                alt="Image 4">
+            <p>EAU DE PARFUM</p>
+            <h5>Luxury Perfume Gift Set For...</h5>
+            <p><span class="material-symbols-outlined">grade</span>4.4 |<span
+                    class="material-symbols-outlined">check_circle</span>256 Review</p>
+            <p><span class="material-symbols-outlined">currency_rupee</span>849.00</p>
+            <button>ADD TO CART</button>
+        </div>
+        <div class="item">
+            <div class="top-left-texts">
+                <span class="purple-text">BUY 1 GET 1 FREE</span>
+                <span class="chocolate-text">BESTSELLER</span>
+            </div>
+            <img src="https://bellavitaorganic.com/cdn/shop/files/C-GlowFaceWash.jpg?v=1693827395&width=300"
+                alt="Image 1">
+            <p>EAU DE PARFUM</p>
+            <h5>Luxury Perfume Gift Set For Me...</h5>
+            <p><span class="material-symbols-outlined">grade</span>4.4 |<span
+                    class="material-symbols-outlined">check_circle</span>256 Review</p>
+            <p><span class="material-symbols-outlined">currency_rupee</span>849.00</p>
+            <button>ADD TO CART</button>
+        </div>
+        <div class="item">
+            <div class="top-left-texts">
+                <span class="purple-text">BUY 1 GET 1 FREE</span>
+                <span class="chocolate-text">BESTSELLER</span>
+            </div>
+            <img src="https://bellavitaorganic.com/cdn/shop/files/1_9a44738a-c364-41d7-abf2-6fe5a45f546d.jpg?v=1716898275&width=300"
+                alt="Image 2">
+            <p>PERFUME MINIS FOR ALL {SET OF 4}</p>
+            <h5>Luxury OUD Experience Set</h5>
+            <p><span class="material-symbols-outlined">grade</span>4.8 |<span
+                    class="material-symbols-outlined">check_circle</span>167 Review</p>
+            <p><span class="material-symbols-outlined">currency_rupee</span>349.00</p>
+            <button>ADD TO CART</button>
+        </div>
+        <div class="item">
+            <div class="top-left-texts">
+                <span class="purple-text">BUY 1 GET 1 FREE</span>
+                <span class="chocolate-text">BESTSELLER</span>
+            </div>
+            <img src="https://bellavitaorganic.com/cdn/shop/files/NicoLips_f3481a6f-0bc2-49fc-b035-fd7fa47c96cb.jpg?v=1693827867&width=300"
+                alt="Image 3">
+            <p>EAU DE PARFUM</p>
+            <h5>CEO Man Luxury Perfume - 100ml</h5>
+            <p><span class="material-symbols-outlined">grade</span>4.4 |<span
+                    class="material-symbols-outlined">check_circle</span>256 Review</p>
+            <p><span class="material-symbols-outlined">currency_rupee</span>899.00</p>
+            <button>ADD TO CART</button>
+        </div>
+        <div class="item">
+            <div class="top-left-texts">
+                <span class="purple-text">BUY 1 GET 1 FREE</span>
+                <span class="chocolate-text">BESTSELLER</span>
+            </div>
+            <img src="https://bellavitaorganic.com/cdn/shop/files/Perfume-Trial-Pack-_10-5ml.jpg?v=1693930900&width=300"
+                alt="Image 4">
+            <p>EAU DE PARFUM</p>
+            <h5>Luxury Perfume Gift Set For...</h5>
+            <p><span class="material-symbols-outlined">grade</span>4.4 |<span
+                    class="material-symbols-outlined">check_circle</span>256 Review</p>
+            <p><span class="material-symbols-outlined">currency_rupee</span>849.00</p>
+            <button>ADD TO CART</button>
+        </div>
+
+        <div class="item">
+            <div class="top-left-texts">
+                <span class="purple-text">BUY 1 GET 1 FREE</span>
+                <span class="chocolate-text">BESTSELLER</span>
+            </div>
+            <img src="https://bellavitaorganic.com/cdn/shop/files/EverreadyWomenCombo.jpg?v=1693931485&width=300"
+                alt="Image 4">
+            <p>EAU DE PARFUM</p>
+            <h5>Luxury Perfume Gift Set For...</h5>
+            <p><span class="material-symbols-outlined">grade</span>4.4 |<span
+                    class="material-symbols-outlined">check_circle</span>256 Review</p>
+            <p><span class="material-symbols-outlined">currency_rupee</span>849.00</p>
+            <button>ADD TO CART</button>
+        </div>
+
+        <div class="item">
+            <div class="top-left-texts">
+                <span class="purple-text">BUY 1 GET 1 FREE</span>
+                <span class="chocolate-text">BESTSELLER</span>
+            </div>
+            <img src="https://bellavitaorganic.com/cdn/shop/files/RefreshingYouCombo.jpg?v=1693930765&width=300"
+                alt="Image 4">
+            <p>FAMILY COMBO</p>
+            <h5>Refreshing You Combo</h5>
+            <p><span class="material-symbols-outlined">grade</span>4.5 |<span
+                    class="material-symbols-outlined">check_circle</span>19 Review</p>
+            <p><span class="material-symbols-outlined">currency_rupee</span>2,249.00</p>
+            <button>ADD TO CART</button>
+        </div>
+    </div>
+
+    <footer>
+        <div class="footer-div">
+            <div class="footer-section" id="bestsellers">
+                BESTSELLERS
+                <ul>
+                    <li>Ultimate Perfume Box</li>
+                    <li>Perfume Gift Set For Men</li>
+                    <li>Perfume Gift Set For Women</li>
+                    <li>Under Eye Cream for Dark Circles</li>
+                    <li>Perfume For Men</li>
+                    <li>Perfume For Women</li>
+                    <li>Unisex Perfume</li>
+                </ul>
+            </div>
+            <div class="footer-section" id="information">
+                INFORMATION
+                <ul>
+                    <li>Blogs</li>
+                    <li>Newsroom</li>
+                    <li>Terms & Conditions</li>
+                    <li>Privacy Policy</li>
+                    <li>Refund and Return</li>
+                    <li>Shipping Policy</li>
+                    <li>Bulk Order - GST Invoice</li>
+                </ul>
+            </div>
+            <div class="footer-section" id="support">
+                SUPPORT
+                <ul>
+                    <li>About Us</li>
+                    <li>Contact Us</li>
+                    <li>Order Tracking</li>
+                    <li>All Products</li>
+                    <li>FAQ</li>
+                    <li>Sitemap</li>
+                </ul>
+            </div>
+            <div class="footer-section" id="contact-us">
+                CONTACT US
+                <ul>
+                    <li>Office Location: Plot no. 417, Udyog Vihar Phase III, Gurgaon, Haryana, India</li>
+                    <li>shop@bellavitaorganic.com</li>
+                    <li>+91-9311732440</li>
+                    <li>Timing: 10:00 AM to 7:00 PM, Monday to Sunday</li>
+                </ul>
+            </div>
+            <div class="footer-section" id="exclusive">
+                EXCLUSIVE
+                <div class="email-section">
+                    <p>Enter your email</p>
+                    <input type="email" placeholder="Your email address">
+                    <p>Sign up here to get the latest news, updates and special offers delivered to your inbox.</p>
+                    <p>Plus, you'll be the first to know about our discounts!</p>
+                </div>
+            </div>
+        </div>
+    
+        <div class="keyword">
+            <h5>MOST SEARCHED KEYWORDS</h5>
+    
+            <div class="keyword-text">
+                <p>
+                Perfume|
+                Best perfume for men|
+                Perfume for men|
+                Vitamin C Face Wash|
+                Perfume for women|
+                Best perfume for women|
+                Perfume set for women|
+                Gift for Men|
+                Face wash for oily skin|
+                Body scrub|
+                Dark circle|
+                Perfume for girls|
+                Dark circles removal cream|
+                Acne face wash|
+                under eye cream|
+                Gift sets for women|
+                Body wash for women|
+                Pocket perfume for men|
+                De tan face pack|
+                Pimple removal cream|
+                Lip scrub|
+                Tan removal face pack|
+                Face wash for acne|
+                Exfoliate scrub|
+                Gift set for men|
+                Coffee Body Scrub|
+                Best long lasting perfume for men|
+                Perfumes for men under 500|
+                Perfumes for women under 500|
+                Perfume gift sets|
+                Oud perfume|
+                Ceo perfume|
+                Under eye cream for dark circles|
+                Acne cream|
+                Vitamin c cream for face|
+                Body lotion for women|
+                Long lasting perfume for women|
+                Perfume gift pack for her|
+                Perfume gift pack for him|
+                Charcoal face wash|
+                Body wash for men|
+                Best shower gel for women|
+                Shower Gel for men and Women|
+                Body lotion for dry skin|
+                Body Lotion for men|
+                Body Lotion for women|
+                Shower Gel and Perfume Combo|
+                Shower Travel Kit|
+                Travel Mini Kit|
+                Birthday Gift for Women/Girls|
+                Wedding Gifts for Couples|
+                Gifts for Men Under 500|
+                Gifts for Women Under 500|
+                Birthday Gift for Men/ Boys|
+                Corporate Gifts|</p>
+            </div>
+        </div>
+    
+        <div class="pvt">
+            <p>© 2024, Bella Vita Organic (IDAM Natural Wellness Pvt. Ltd.).</p>
+        </div>
+    </footer>
+
+</body>
+
+</html>
